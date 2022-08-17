@@ -1,12 +1,12 @@
+let playerScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
   const rockPaperScissors = ["rock", "paper", "scissors"];
   const random =
     rockPaperScissors[~~(Math.random() * rockPaperScissors.length)];
   return random;
 }
-
-let playerScore = 0;
-let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {  // TIE GAME
@@ -79,4 +79,4 @@ function playGame() {
   "Player: " + playerScore)
 }
 
-console.log(playGame());
+playGame();
