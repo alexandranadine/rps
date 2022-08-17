@@ -1,8 +1,3 @@
-// Odin Project RPS
-//scissors beats paper
-//paper beats rock
-//rock beats scissors
-
 function getComputerChoice() {
   const rockPaperScissors = ["rock", "paper", "scissors"];
   const random =
@@ -14,9 +9,8 @@ let playerScore = 0;
 let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection === computerSelection) {
-    console.log("Tie game!!");
-    console.log(
+  if (playerSelection === computerSelection) {  // TIE GAME
+    console.log("TIE GAME!\n" +
       "the computer picked: " +
         computerSelection +
         "\n" +
@@ -31,14 +25,13 @@ function playRound(playerSelection, computerSelection) {
     );
   }
 
-  if (
+  if (  // COMPUTER WINS
     (computerSelection === "rock" && playerSelection === "scissors") ||
     (computerSelection === "scissors" && playerSelection === "paper") ||
     (computerSelection === "paper" && playerSelection === "rock")
   ) {
     computerScore++;
-    console.log("You lose! Big fat loser!");
-    console.log(
+    console.log("You LOSE!\n" +
       "the computer picked: " +
         computerSelection +
         "\n" +
@@ -53,14 +46,13 @@ function playRound(playerSelection, computerSelection) {
     );
   }
 
-  if (
+  if (  // PLAYER WINS
     (computerSelection === "scissors" && playerSelection === "rock") ||
     (computerSelection === "paper" && playerSelection === "scissors") ||
     (computerSelection === "rock" && playerSelection === "paper")
   ) {
     playerScore++;
-    console.log("You WIN!");
-    console.log(
+    console.log("You WIN!\n" +
       "the computer picked: " +
         computerSelection +
         "\n" +
@@ -82,15 +74,9 @@ function playGame() {
     const computerSelection = getComputerChoice();
     playRound(playerSelection, computerSelection);
   }
+  console.log("TOTAL SCORES: \n" + 
+  "Computer: " + computerScore + "\n" +
+  "Player: " + playerScore)
 }
 
-// console.log(
-//   "the computer picked: " +
-//     computerSelection +
-//     "\n" +
-//     "the player picked: " +
-//     playerSelection
-// );
-// playRound(playerSelection, computerSelection);
 console.log(playGame());
-// console.log("CS:   " + computerSelection);
