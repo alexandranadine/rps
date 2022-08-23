@@ -1,12 +1,46 @@
-@import 'node_modules/modern-normalize/modern-normalize.css';
+@import "node_modules/modern-normalize/modern-normalize.css";
 body {
   background-color: #eee;
+}
+
+.dark-bg {
+  background-color: #888;
 }
 
 .container {
   display: flex;
   justify-content: center;
-  border: 1px solid white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+i {
+  font-size: 3rem;
+}
+
+.col-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.col-container span {
+  padding: 1rem;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #bdbdbd;
+  width: 100px;
+  height: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */
