@@ -12,31 +12,41 @@
     <title>Rock! Paper! Scissors!</title>
   </head>
   <body>
+
     <header class="container dark-bg">
       <h1>Rock! Paper! Scissors!</h1>
     </header>
-    <main class="button-container">
+
+    <section class="button-container">
       <div class="col-container">
-        <div class="icon-container">
+        <button id="rockbtn" class="icon-container">
             <i class="fa-solid fa-hand-back-fist"></i>
           </div>
           <span id="rock">Rock</span>
       </div>
-
       <div class="col-container">
-        <div class="icon-container">
+        <button id="paperbtn" class="icon-container">
             <i class="fa-solid fa-hand"></i>
           </div>
           <span id="paper">Paper</span>
       </div>
-
       <div class="col-container">
-        <div class="icon-container">
+        <button id="scissorsbtn" class="icon-container">
             <i class="fa-solid fa-hand-scissors"></i>
           </div>
           <span id="scissors">Scissors</span>
       </div>
-    </main>
+    </section>
+
+    <section class="score-container dark-bg">
+      <div class="outcome"></div>
+      <div class="scores">
+          <div><span>Player Score: </span><span id="pScore">0</span></div>
+          <div><span>Computer Score: </span><span id="cScore">0</span></div>
+      </div>
+    </section>
+
+
 
     <script src="app.js"></script>
   </body>

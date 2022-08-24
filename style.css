@@ -1,6 +1,7 @@
 @import "node_modules/modern-normalize/modern-normalize.css";
 body {
   background-color: #eee;
+  height: 100vh;
 }
 
 .dark-bg {
@@ -16,11 +17,12 @@ body {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
 }
 
 i {
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .col-container {
@@ -31,6 +33,9 @@ i {
 .col-container span {
   padding: 1rem;
 }
+.col-container button {
+  border: none;
+}
 
 .icon-container {
   display: flex;
@@ -39,8 +44,29 @@ i {
   align-items: center;
   border-radius: 50%;
   background-color: #bdbdbd;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.outcome {
+  padding: 1rem 0 0 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
