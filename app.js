@@ -3,8 +3,7 @@ const paperButton = document.querySelector("#paperbtn");
 const scissorsButton = document.querySelector("#scissorsbtn");
 const displayPlayerScore = document.querySelector("#pScore");
 const displayComputerScore = document.querySelector("#cScore");
-const outcome = document.querySelector('.outcome');
-let roundResult = ''
+const outcome = document.querySelector(".outcome");
 let playerScore = 0;
 let computerScore = 0;
 
@@ -18,22 +17,7 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     // TIE GAME
-outcome.textContent = "Tie game!";
-
-    console.log(
-      "TIE GAME!\n" +
-        "the computer picked: " +
-        computerSelection +
-        "\n" +
-        "the player picked: " +
-        playerSelection +
-        "\n" +
-        "the computer's score: " +
-        computerScore +
-        "\n" +
-        "the player's score: " +
-        playerScore
-    );
+    outcome.textContent = "Tie game!";
   }
 
   if (
@@ -43,23 +27,9 @@ outcome.textContent = "Tie game!";
     (computerSelection === "paper" && playerSelection === "rock")
   ) {
     computerScore++;
-    outcome.textContent = `Computer wins! ${capitalize(computerSelection)} beats ${capitalize(playerSelection)}.`;
+    outcome.textContent = 
+    `Computer wins! ${capitalize(computerSelection)} beats ${capitalize(playerSelection)}.`;
     displayComputerScore.textContent = computerScore;
-
-    console.log(
-      "You LOSE!\n" +
-        "the computer picked: " +
-        computerSelection +
-        "\n" +
-        "the player picked: " +
-        playerSelection +
-        "\n" +
-        "the computer's score: " +
-        computerScore +
-        "\n" +
-        "the player's score: " +
-        playerScore
-    );
   }
 
   if (
@@ -69,22 +39,9 @@ outcome.textContent = "Tie game!";
     (computerSelection === "rock" && playerSelection === "paper")
   ) {
     playerScore++;
-    outcome.textContent = `You win! ${capitalize(playerSelection)} beats ${capitalize(computerSelection)}.`;
+    outcome.textContent = 
+    `You win! ${capitalize(playerSelection)} beats ${capitalize(computerSelection)}.`;
     displayPlayerScore.textContent = playerScore;
-    console.log(
-      "You WIN!\n" +
-        "the computer picked: " +
-        computerSelection +
-        "\n" +
-        "the player picked: " +
-        playerSelection +
-        "\n" +
-        "the computer's score: " +
-        computerScore +
-        "\n" +
-        "the player's score: " +
-        playerScore
-    );
   }
 }
 
@@ -104,19 +61,3 @@ scissorsButton.addEventListener("click", function () {
 function capitalize(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
-
-// function playGame() {
-//   const computerSelection = getComputerChoice();
-//   playRound(playerSelection, computerSelection);
-
-//   console.log(
-//     "TOTAL SCORES: \n" +
-//       "Computer: " +
-//       computerScore +
-//       "\n" +
-//       "Player: " +
-//       playerScore
-//   );
-// }
-
-// playGame();
