@@ -35,6 +35,16 @@ i {
 }
 .col-container button {
   border: none;
+  cursor: pointer;
+  box-shadow: 0 9px #999;
+  transition: 300ms ease;
+}
+.col-container button:hover {
+  background-color: rgb(162, 202, 212);
+}
+.col-container button:active {
+  transform: translateY(5px);
+  box-shadow: 0 5px #838383;
 }
 
 .icon-container {
