@@ -4,6 +4,7 @@ const scissorsButton = document.querySelector("#scissorsbtn");
 const displayPlayerScore = document.querySelector("#pScore");
 const displayComputerScore = document.querySelector("#cScore");
 const outcome = document.querySelector(".outcome");
+const resetGame = document.querySelector("#reset");
 let playerScore = 0;
 let computerScore = 0;
 
@@ -47,17 +48,25 @@ function playRound(playerSelection, computerSelection) {
 
 rockButton.addEventListener("click", function () {
   playRound("rock", getComputerChoice());
-  console.log("rock");
 });
 paperButton.addEventListener("click", function () {
   playRound("paper", getComputerChoice());
-  console.log("paper");
 });
 scissorsButton.addEventListener("click", function () {
   playRound("scissors", getComputerChoice());
-  console.log("scissors");
+});
+resetGame.addEventListener("click", function () {
+  resetScore();
 });
 
 function capitalize(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function resetScore() {
+  computerScore = 0;
+  playerScore = 0; 
+  outcome.textContent = "Enjoy the game!";
+  displayPlayerScore.textContent = playerScore;
+  displayComputerScore.textContent = computerScore;
 }
